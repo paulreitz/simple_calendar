@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="weekdays">
+        <mat-grid-list cols="7" rowHeight="2rem">
+            <mat-grid-tile *ngFor="let weekday of weekdays" class="weekday">
+                {{ weekday }}
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+    <div class="days">
+        <mat-grid-list cols="7" rowHeight="fit" class="days-grid">
+            <mat-grid-tile
+                *ngFor="let day of days"
+                [ngClass]="{
+                    'day': true,
+                    'today': day.isToday,
+                    'in-month': day.isCurrentMonth,
+                    'not-in-month': !day.isCurrentMonth
+                }"
+                >
+                <span class="date-text">{{day.date}}</span>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+</div>

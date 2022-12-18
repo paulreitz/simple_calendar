@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-container {
+    flex: 1;
+}
+
+.weekday {
+    background-color: #408aa6;
+}
+
+.days {
+    height: calc(100% - 2rem);
+    width: 100vw;
+}
+
+.days-grid {
+    width: 100%;
+    height: 100%;
+}
+
+.day {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.today {
+    border-top: 5px solid #4c00c9;
+    color: #4c00c9;
+    font-weight: 600;
+
+    .date-text {
+        margin-top: -6px;
+    }
+}
+
+.in-month {
+    background-color: #e2f0f7;
+}
+
+.not-in-month {
+    background-color: #b0a8b9;
+}
+
+.date-text {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+}
